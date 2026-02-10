@@ -4,6 +4,7 @@ on:
   pull_request:
   push:
     branches: [main]
+    tags: ['v*']
     paths-ignore:
       - '*.md'
       - 'docs/**'
@@ -20,3 +21,8 @@ jobs:
     uses: ourochronos/our-infra/.github/workflows/test.yml@main
     with:
       postgres: true
+  release:
+    needs: test
+    uses: ourochronos/our-infra/.github/workflows/release.yml@main
+    secrets:
+      PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
