@@ -1,6 +1,6 @@
 # oro-db
 
-Database connectivity, configuration, and migration brick. Part of the [orobobos](https://github.com/orobobos) ecosystem.
+Database connectivity, configuration, and migration brick. Part of the [ourochronos](https://github.com/ourochronos) ecosystem.
 
 ## Installation
 
